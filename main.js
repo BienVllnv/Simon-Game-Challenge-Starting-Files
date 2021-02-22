@@ -41,7 +41,7 @@ const checkAnswer = (currentLevel) => {
     } 
 }
 
-const nextSequence = () =>{
+const nextSequence = () => {
 
     userClickedPattern = [];
 
@@ -51,7 +51,7 @@ const nextSequence = () =>{
     const randomNumber = Math.floor(Math.random() * 4);
     const randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
-
+``
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     
    playSound(randomChosenColor);
