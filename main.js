@@ -24,7 +24,7 @@ $(".btn").click(function() {
    checkAnswer(userClickedPattern.length-1);
 });
 
-function checkAnswer(currentLevel) {
+const checkAnswer = (currentLevel) => {
 
     if(userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
         if(userClickedPattern.length === gamePattern.length) {
@@ -41,7 +41,7 @@ function checkAnswer(currentLevel) {
     } 
 }
 
-function nextSequence() {
+const nextSequence = () =>{
 
     userClickedPattern = [];
 
@@ -57,19 +57,19 @@ function nextSequence() {
    playSound(randomChosenColor);
 }
 
-function playSound(e) {
+const playSound = (e) => {
     const audio = new Audio("sounds/" + e + ".mp3");
     audio.play();
 }
 
-function animatePress(currentColor) {
+const animatePress = (currentColor) => {
 
     $("#" + currentColor).addClass("pressed");
 
     setTimeout(() => $("#" + currentColor).removeClass("pressed"), 100);
 }
 
-function startOver() {
+const startOver = () => {
     gamePattern = [];
     level = 0;
     started = false;
